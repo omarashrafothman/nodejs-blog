@@ -1,0 +1,59 @@
+<% if (error) { %>
+  <p style="color: #b30000; margin-bottom: 1rem;"><%= error %></p>
+<% } %>
+
+<% if (success) { %>
+  <p style="color: #0a7a32; margin-bottom: 1rem;"><%= success %></p>
+<% } %>
+
+<h3>Sign In</h3>
+
+<form action="/admin" method="POST">
+  <label for="login-username"><b>Username</b></label>
+  <input
+    type="text"
+    id="login-username"
+    placeholder="Enter Username"
+    name="username"
+    required
+  />
+
+  <label for="login-password"><b>Password</b></label>
+  <input
+    type="password"
+    id="login-password"
+    placeholder="Enter Password"
+    name="password"
+    required
+  />
+
+  <input type="submit" value="Login" class="btn" />
+</form>
+
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid #e4e4e4;" />
+
+<h3>Register</h3>
+
+<form action="/register" method="POST">
+  <label for="register-username"><b>Username</b></label>
+  <input
+    type="text"
+    id="register-username"
+    placeholder="Enter Username"
+    name="username"
+    minlength="3"
+    required
+  />
+
+  <label for="register-password"><b>Password</b></label>
+  <input
+    type="password"
+    id="register-password"
+    placeholder="Enter Password (min 6 chars)"
+    name="password"
+    minlength="6"
+    required
+  />
+
+  <input type="submit" value="Register" class="btn" />
+</form>
